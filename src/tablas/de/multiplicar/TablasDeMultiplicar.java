@@ -16,23 +16,44 @@ public class TablasDeMultiplicar {
      */
     public static void main(String[] args) {
         
-        System.out.println("Tablas de multiplicar:");
         int numero=1;
-        int contador ;//Esta variable es para la tabla de multiplicar
-        int contadort;//Esta es para el numero por el que se multiplica
+        int contadort=0;//Esta es para el numero por el que se multiplica
         int resultado;
+    
+        
+        //Con un bucle FOR
+        
+      System.out.println("Tablas de multiplicar bucle for:");
+        
         //Bucle para aumentar el numero de la tabla de multiplicar
-        for( contador=1;contador<=10;contador ++){
+        for( numero=1;numero<=10;numero ++){
             System.out.println("Tabla de multiplicar del " + numero);
                     //Bucle para aumentar el numero por el que se multiplica
                     for (contadort=1; contadort<=10;contadort ++){
                         resultado= contadort * numero;
                         System.out.println(numero + "x" + contadort+ "=" +resultado);
                     }
-                      
-                      numero++;
-                            
-        }
-    }
-    
+          }
+        //Reiniciamos las variables que necesitamos
+        contadort=0;
+        numero=1;
+           //Con un bucle while
+           System.out.println("Tablas de multiplicar bucle while:");
+      
+        //Bucle para aumentar el numero de la tabla de multiplicar
+        while(numero<=10){
+            System.out.println("Tabla de multiplicar del " + numero);
+                    //Bucle para aumentar el numero por el que se multiplica
+                    while ( contadort<=10){
+                        resultado= contadort * numero;
+                        System.out.println(numero + "x" + contadort+ "=" +resultado);
+                        contadort++;
+                    }
+                    
+           contadort=0;//Se restablece el contador de la multiplicacion           
+           numero++;
+           
+                }
+         }
 }
+
